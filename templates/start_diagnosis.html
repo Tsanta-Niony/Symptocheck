@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SymptoCheck</title>
+    <link rel="stylesheet" href="../static/css/stylestarted.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/icon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="{{url_for('static', filename='images/logo.png')}}" alt=""></li>
+                <li><a href="{{url_for('home')}}" class="lien">Home</a></li>
+                <li><a href="{{url_for('Key_objectives')}}" class="lien">Key Objectives</a></li>
+                <li><a href="{{url_for('the_9_diseases')}}" class="lien">The 9 Diseases</a></li>
+                <li><a href="{{url_for('About')}}" class="lien">About us</a></li>
+            </ul>
+            
+        </nav>
+    </header><br>
+    <h2> Follow each step carefully so we can assist you</h2>
+    <div class="form-section">
+        <form class="symptom-form" action="{{url_for('start_diagnosis')}}" method="POST">
+            <table>
+                <tr>
+                    <td><label for="name" name="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Your name"><br></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td> 
+                    <td><input type="number" id="age" name="age" min =0 required><br></td> 
+                </tr>   
+            </table>
+            <div class="ethnicity">
+                <p>Ethnicity:</p>
+                <label>Asian: <input type="radio" name="ethnicity" value="Asian"></label>
+                <label>Caucasian: <input type="radio" name="ethnicity" value="Caucasian"></label>
+                <label>Hispanic: <input type="radio" name="ethnicity" value="Hispanic"></label>
+                <label>Other: <input type="radio" name="ethnicity" value="Other"></label>
+            </div><br>
+
+            <h3>Please Check 'YES' if symptoms are present, 'NO' if not (default: 'NO'):</h3><br><br>
+            <div class="symptoms-grid">
+                <div class="symptom-item">
+                    <span>Abdominal Pain</span>
+                    <label class="yes-label">YES <input type="radio" name=" abdominal pain" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" abdominal pain" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Bloating</span>
+                    <label class="yes-label">YES <input type="radio" name=" bloating" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" bloating" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Blurred Vision</span>
+                    <label class="yes-label">YES <input type="radio" name=" blurred vision" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" blurred vision" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Chest Pain</span>
+                    <label class="yes-label">YES <input type="radio" name=" chest pain" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" chest pain" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Chest Tightness</span>
+                    <label class="yes-label">YES <input type="radio" name=" chest tightness" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" chest tightness" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Rash</span>
+                    <label class="yes-label">YES <input type="radio" name=" rash" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" rash" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Chills</span>
+                    <label class="yes-label">YES <input type="radio" name=" chills" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" chills" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Chronic Cough</span>
+                    <label class="yes-label">YES <input type="radio" name=" chronic cough" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" chronic cough" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Coughing</span>
+                    <label class="yes-label">YES <input type="radio" name=" coughing" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" coughing" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Dizziness</span>
+                    <label class="yes-label">YES <input type="radio" name=" dizziness" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" dizziness" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Fatigue</span>
+                    <label class="yes-label">YES <input type="radio" name=" fatigue" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" fatigue" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Fever</span>
+                    <label class="yes-label">YES <input type="radio" name=" fever" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" fever" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Frequent urination</span>
+                    <label class="yes-label">YES <input type="radio" name=" frequent urination" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" frequent urination" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Headache</span>
+                    <label class="yes-label">YES <input type="radio" name=" headache" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" headache" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Healthy</span>
+                    <label class="yes-label">YES <input type="radio" name=" healthy" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" healthy" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Increased Thirst</span>
+                    <label class="yes-label">YES <input type="radio" name=" increased thirst" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" increased thirst" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Irregular Heartbeat</span>
+                    <label class="yes-label">YES <input type="radio" name=" irregular heartbeat" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" irregular heartbeat" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Muscle Pain</span>
+                    <label class="yes-label">YES <input type="radio" name=" muscle pain" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" muscle pain" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Nausea</span>
+                    <label class="yes-label">YES <input type="radio" name=" nausea" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" nausea" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Night Sweats</span>
+                    <label class="yes-label">YES <input type="radio" name=" night sweats" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" night sweats" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>No Symptoms</span>
+                    <label class="yes-label">YES <input type="radio" name=" no symptoms" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" no symptoms" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Nosebleeds</span>
+                    <label class="yes-label">YES <input type="radio" name=" nosebleeds" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" nosebleeds" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Shortness of Breath</span>
+                    <label class="yes-label">YES <input type="radio" name=" shortness of breath" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" shortness of breath" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Stomach Pain</span>
+                    <label class="yes-label">YES <input type="radio" name=" stomach pain" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" stomach pain" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Swollen Lymph Nodes</span>
+                    <label class="yes-label">YES <input type="radio" name=" swollen lymph nodes" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" swollen lymph nodes" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Vomiting</span>
+                    <label class="yes-label">YES <input type="radio" name=" vomiting" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" vomiting" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Weakness</span>
+                    <label class="yes-label">YES <input type="radio" name=" weakness" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" weakness" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Weight Loss</span>
+                    <label class="yes-label">YES <input type="radio" name=" weight loss" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" weight loss" value="no" checked></label>
+                </div>
+                <div class="symptom-item">
+                    <span>Wheezing</span>
+                    <label class="yes-label">YES <input type="radio" name=" wheezing" value="yes"></label>
+                    <label class="no-label">NO <input type="radio" name=" wheezing" value="no" checked></label>
+                </div>
+                <button class="active" type="submit"> <a href="#">Valid</a></button>
+            </div>
+        </form>
+
+        <div class="image-section">
+            <img src="{{url_for('static', filename='images/diag.jpg')}}" alt="doc">
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <p>CONTACT US:</p>
+            <p><img src="{{url_for('static', filename='images/facebook.webp')}}" alt="fb"> <a href="www.facebook.com">SymptoCheck</a> </p>
+            <p><img src="{{url_for('static', filename='images/gmail.png')}}" alt="mail"> <a href="www.gmail.com">CheckSymptoCheck@gmail.com</a></p>
+            <p><img src="{{url_for('static', filename='images/whatsapp.png')}}" alt="whatsapp"> <a href="www.whatsapp.com">+260 23 365 24</a></p>
+        </div>
+        <p>© 2024</p>
+    </footer>
+
+    <script src="../static/js/scriptstart.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e6f9ec;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a.lien {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+
+nav ul li a#active {
+    color: #50C878;
+    border-bottom: 2px solid #50C878;
+}
+
+nav ul li img {
+    width: 200px;
+    height: 80px;
+}
+
+.start-diagnosis {
+    background-color: #50C878;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.start-diagnosis a {
+    text-decoration: none;
+    border: none;
+    color: white;
+}
+h3 {
+    margin-left: 40px;
+}
+.container {
+    text-align: center;
+    background-color: #F0FFF0;
+    padding: 20px;
+}
+
+.diseases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+   /* margin-left: 100px;*/
+    text-align: center;
+}
+}
+.illness {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.illness img {
+    width: 170px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.illness button {
+    background-color: #50C878;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.liste {
+    margin-left: -40%;
+}
+#openPopup {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    max-height: 140vh;
+    overflow: hidden;
+}
+
+.popup-content img {
+    width: 170px;
+    height: 100px;
+}
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    width: 80%W;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow-y: auto;
+    
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: #333;
+}
+footer {
+    padding: 20px;
+    background-color: #e6f9ec;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+footer p a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}

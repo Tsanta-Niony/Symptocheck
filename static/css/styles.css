@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2bb673;
+}
+
+header {
+    background-color: #e6f9ec;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a.lien {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+
+nav ul li img {
+    width: 200px;
+    height:80px;
+}
+nav ul li a#active {
+    border-bottom: 2px solid #50C878;
+    color: #50C878;
+}
+
+.start-diagnosis {
+    background-color: #50C878;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.start-diagnosis a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: #F0FFF0;
+}
+
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.objective img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.doc img {
+    width: 350px;
+    height: 200px;
+}
+.get-started {
+    background-color: #2bb673;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.get-started a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+footer {
+    background-color: #e6f9ec;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-info img {
+    width: 50px;
+    margin-right: 10px;
+ 
+}
+footer p a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    margin-top: 10%;
+}

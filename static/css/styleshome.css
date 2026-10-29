@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e6f9ec;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+
+}
+
+nav ul li a.lien {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+
+nav ul li img {
+    width: 200px;
+    height: 80px;
+}
+
+nav ul li a#active {
+    color: #50C878;
+    border-bottom: 2px solid #50C878;
+}
+
+.start-diagnosis {
+    background-color: #50C878;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.start-diagnosis a {
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+.hero-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #F0FFF0;
+}
+
+.hero-section h1 {
+    color: #2c7d32;
+    margin-bottom: 20px;
+}
+ .hero-section .left {
+    max-width: 60%;
+    margin-left: 60px;
+    text-align: justify;
+ }
+
+.get-started {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.get-started a {
+    color: white;
+    text-decoration: none;
+}
+.right img {
+    width: 350x;
+    height: 425px;
+    margin-right:  -70%;
+    margin-top: -20%;
+}
+.benefits-section {
+    margin-top: -5%;
+    background-color: #e6f9ec;
+    text-align: center;
+}
+
+.benefits-section h2 {
+    margin-bottom: 30px;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefit {
+    width: 150px;
+    height: 100px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+}
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    border: none;
+}
+
+.objective img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+.objectives-grid .objective a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    text-decoration: none;
+}
+button {
+    border: none;
+}
+footer {
+    padding: 20px;
+    background-color: #e6f9ec;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+footer p a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}

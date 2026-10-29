@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e6f9ec;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a.lien{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+
+.active {
+    text-decoration: none;
+    background-color: rgb(241, 122, 71);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+ .active a {
+     border: none;
+     text-decoration: none;
+     color: white;
+ }
+nav ul li img {
+    width: 200px;
+    height: 80px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.symptom-form {
+    width: 60%;
+    margin-left: 90px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.ethnicity p, .symptoms-grid p {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.ethnicity {
+    margin: 20px 0;
+}
+
+h3{
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    margin-left: 20%;
+}
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.symptom-item {
+    display: flex;
+    align-items: center;
+}
+
+.symptom-item span {
+    width: 150px;
+}
+
+.yes-label {
+    color: green;
+    font-weight: bold;
+}
+.no-label {
+    color: red;
+    font-weight: bold;
+}
+
+.image-section {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #e6f9ec;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+footer p a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}

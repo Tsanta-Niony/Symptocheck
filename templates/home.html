@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SymptoCheck</title>
+    <link rel="stylesheet" href="../static/css/styleshome.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/icon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="{{url_for('static', filename='images/logo.png')}}" alt=""></li>
+                <li><a href="#" id="active" class="lien">Home</a></li>
+                <li><a href="{{url_for('Key_objectives')}}" class="lien">Key Objectives</a></li>
+                <li><a href="{{url_for('the_9_diseases')}}" class="lien">The 9 Diseases</a></li>
+                <li><a href="{{url_for('About')}}" class="lien">About us</a></li>
+                <li>
+                        <button class="start-diagnosis"><a href="{{url_for('start_diagnosis')}}"> Start Diagnosis</a></button>
+                </li>
+            </ul>
+            
+        </nav>
+    </header>
+
+       
+     <section class="hero-section">
+        <div class="left">
+        <h1>SymptoCheck: Empowering Your Health with Smart, Fast Diagnoses</h1>
+        <p>Designed specifically for Madagascar, <strong>SymptoCheck</strong> targets 9 key diseases: asthma, COPD, diabetes, HIV, heart disease, malaria, typhoid, and ulcers.</p>
+        <P>These conditions were selected due to their high prevalence and significant public health impact ...</P>
+        <button class="get-started"><a href="{{url_for('start_diagnosis')}}"> Get Started</a></button>
+        </div>
+        <div class="right">
+            <img src="{{url_for('static', filename='images/accueil.png')}}" alt="">
+        </div>
+    </section>
+    
+    <section class="benefits-section">
+        <h2>Additional Benefits of Using SymptoCheck</h2>
+        <div class="objectives-grid">
+            <div class="objective">
+                <img src="{{url_for('static', filename='images/ai.png')}}" alt="AI Icon">
+                <h3>Accurate Diagnosis</h3>
+                <p>Using machine learning algorithms to analyze patient symptoms and provide precise diagnoses for common diseases prevalent in Madagascar.</p>
+            </div>
+            <div class="objective">
+                <img src="{{url_for('static', filename='images/pub.png')}}" alt="Education Icon">
+                <h3>Educational Resource</h3>
+                <p>To serve as an informative platform about symptoms, disease prevention, and the importance of seeking medical attention.</p><br><br><br><br><br>
+                <button><a href="{{url_for('Key_objectives')}}">See more</a></button>
+            </div>
+            
+        </div><br><br>
+    </section><hr>
+
+    <footer>
+        <div class="contact-info">
+            <p>CONTACT US:</p>
+            <p><img src="{{url_for('static', filename='images/facebook.webp')}}" alt="fb"> <a href="www.facebook.com">SymptoCheck</a> </p>
+            <p><img src="{{url_for('static', filename='images/gmail.png')}}" alt="mail"> <a href="www.gmail.com">CheckSymptoCheck@gmail.com</a></p>
+            <p><img src="{{url_for('static', filename='images/whatsapp.png')}}" alt="whatsapp"> <a href="www.whatsapp.com">+260 23 365 24</a></p>
+        </div>
+        <p>© 2024</p>
+    </footer>
+
+    <script src="../static/js/scripthome.js
+    "></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+# Environnements virtuels Python
+venv/
+.venv/
+source/
+
+# Fichiers Python temporaires
+__pycache__/
+*.py[cod]
+
+# Secrets et configurations locales
+.env
+
+# Éditeurs
+.vscode/
+.idea/

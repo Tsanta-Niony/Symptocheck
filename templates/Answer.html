@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SymptoCheck</title>
+    <link rel="stylesheet" href="../static/css/styleanswer.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/icon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="{{url_for('static', filename='images/logo.png')}}" alt=""></li>
+                <li><a href="{{url_for('home')}}" class="lien">Home</a></li>
+                <li><a href="{{url_for('Key_objectives')}}" class="lien">Key Objectives</a></li>
+                <li><a href="{{url_for('the_9_diseases')}}" class="lien">The 9 Diseases</a></li>
+                <li><a href="{{url_for('About')}}" class="lien">About us</a></li>
+                <li>
+                        <button class="start-diagnosis"><a href="{{url_for('start_diagnosis')}}"> Restart Diagnosis</a></button>
+                </li>
+            </ul>
+            
+        </nav>
+    </header><br><br>
+    <h3> <strong>{{name}},</strong> based on the analysis of the symptoms you checked, it is likely that you are suffering from a <strong>{{prediction}}</strong></h3><br>
+    <section class="answer">
+       <div>
+            <p>To assist you, I am giving you these recommendations for now. However, if possible, I highly recommend that you see a specialist doctor right away who can help you even further.</p><br>
+            <img src="{{url_for('static', filename='images/consultation.jpg')}}" alt="consultation">
+       </div> 
+       <div>
+            <br> <h4>Probability: {{probability}}</h4><br>
+       </div>
+    </section>
+    <footer>
+            <div class="contact-info">
+                <p>CONTACT US:</p>
+                <p><img src="{{url_for('static', filename='images/facebook.webp')}}" alt="fb"> <a href="www.facebook.com">SymptoCheck</a> </p>
+                <p><img src="{{url_for('static', filename='images/gmail.png')}}" alt="mail"> <a href="www.gmail.com">CheckSymptoCheck@gmail.com</a></p>
+                <p><img src="{{url_for('static', filename='images/whatsapp.png')}}" alt="whatsapp"> <a href="www.whatsapp.com">+260 23 365 24</a></p>
+            </div>
+            <p>© 2024</p>
+        </footer>
+    
+        <script src="../static/js/scripthome.js"></script>
+    </body>
+    </html>
